@@ -1,7 +1,24 @@
 
-interface A {
+interface AA {
   id: number
   text: string
 }
 
-const instance = { id: 1, text: 'test' } as A
+class A
+{
+    private a:number
+}
+
+class B extends A
+{
+    private b:number
+    say()
+    {
+        console.log('hi')
+    }
+}
+
+let a:A = new B();
+(a as B).say();
+
+const instance = { id: 1, text: 'test' } as AA;
