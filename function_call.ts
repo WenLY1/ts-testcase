@@ -1,36 +1,15 @@
-interface O {
-  name: string,
-  fn: (a?:string) => void
-}
 
-interface O2 {
-  name: string
-}
-
-
-let obj: O = {
-  name: 'Mike',
-  fn(a?:string) {
-    console.log(this.name, a)
+type ReturnVoidFn = (evt?: any) => number
+class VoidEvent {
+  name: string = 'click'
+  fn2: ReturnVoidFn | null = null
+  bindFn() {
+    this.fn2 = (evt?: any): number => {
+      console.log(this.name)
+      return 3;
+    }
   }
 }
-
-let obj2: O2 = {
-  name: 'Alice'
-}
-
-obj.fn.call(obj2, 'obj2')
-
-let obj3: O2 = {
-  name: 'Bill'
-}
-
-let bindFn = obj.fn.bind(obj3, 'obj3')
-
-bindFn()
-
-let obj4: O2 = {
-  name: 'Lily'
-}
-
-obj.fn.apply(obj4, ['obj4'])
+let a: VoidEvent= new VoidEvent(); 
+a.bindFn(); 
+a.fn2!.call('aa')
