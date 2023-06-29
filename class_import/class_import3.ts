@@ -1,6 +1,1 @@
-export default class C {
-  
-    testC() {
-      return 1;
-    }
-}
+export type CbId = number
