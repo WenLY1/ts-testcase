@@ -11,10 +11,9 @@ class Node {
   event: TypeEvent | null = null
   bindEvent() {
     const evt = new TypeEvent()
-    const that = this
     let fn2 = (evt?: any): number => {
-      // 问题：使用 this 会导致编译时报错：parse exception: bad heap type: expected
-      console.log('----callFn in Node event', that.id)
+      // 问题：使用 this 会导致编译时报错：get context of closure failed, varNode is this
+      console.log('----callFn in Node event', this.id)
       return 1
     }
     evt.fn2 = fn2
