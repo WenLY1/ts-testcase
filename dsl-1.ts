@@ -1,0 +1,1 @@
+export type ForCallback<T> = (item: T, index?: number) => void
