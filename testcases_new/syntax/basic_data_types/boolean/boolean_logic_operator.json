@@ -1,0 +1,76 @@
+[
+    {
+        "case": "logicOr",
+        "args": [
+            {
+                "x": 1,
+                "y": 2
+            },
+            {
+                "x": 100,
+                "y": 1000
+            }
+        ]
+    },
+    {
+        "case": "logicAnd",
+        "args": [
+            {
+                "x": 1,
+                "y": 2
+            },
+            {
+                "x": 100,
+                "y": 1000
+            }
+        ]
+    },
+    {
+        "case": "conditionExpr",
+        "args": [
+            {
+                "x": 1,
+                "y": 2
+            },
+            {
+                "x": 100,
+                "y": 1000
+            }
+        ]
+    },
+    {
+        "case": "notNumber",
+        "args": [
+            {
+                "x": 1
+            },
+            {
+                "x": 100
+            }
+        ]
+    },
+    {
+        "case": "notBoolean",
+        "args": [
+            {
+                "b": true
+            },
+            {
+                "b": false
+            }
+        ]
+    },
+    {
+        "case": "notWithLogicOperator",
+        "args": [
+            {
+                "x": 1,
+                "y": 2
+            },
+            {
+                "x": 100,
+                "y": 1000
+            }
+        ]
+    }
+]

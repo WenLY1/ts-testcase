@@ -1,0 +1,24 @@
+[
+    {
+        "case": "booleanBasicTrue",
+        "args": [
+            {
+                "b": true
+            },
+            {
+                "b": false
+            }
+        ]
+    },
+    {
+        "case": "booleanCmp",
+        "args": [
+            {
+                "b": true
+            },
+            {
+                "b": false
+            }
+        ]
+    }
+]
