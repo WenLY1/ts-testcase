@@ -10,9 +10,9 @@ enum Color {
   }
   
 enum Color1 {
-    Red = '红',
-    Green = '绿',
-    Blue = '蓝'
+    Red = 'red',
+    Green = 'green',
+    Blue = 'blue'
 }
 
 export function digitEnum(){
