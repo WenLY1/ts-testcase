@@ -31,27 +31,31 @@ export function unionClassNumber() {
 export function unionClassClassNull() {
     let a: A | B | null = new A();
     let x = a.x;
+    console.log(x);
 
     a = new B();
     let y = a.y;
+    console.log(y);
 }
 
 export function unionClassClassString() {
     let a: A | B | string = new A();
     let x = a.x;
+    console.log(x);
 
     a = new B();
     let y = a.y;
+    console.log(y)
 
     a = "hello world";
+    console.log(a);
 }
 
-function testAnyNull() : any | null {
+function testAnyNull(): any | null {
     return null;
 }
 
-export function testFuncReturnAnyNull()
-{
+export function testFuncReturnAnyNull() {
     if (testAnyNull() === null) {
         console.log("is null");
     }

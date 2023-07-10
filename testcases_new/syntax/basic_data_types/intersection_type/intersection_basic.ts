@@ -3,21 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
  */
 
-class Car {
-    driveOnRoad() {
-        console.log("drive on road");
-    }
+interface Colorful {
+    color: string;
+}
+interface Circle {
+    radius: number;
 }
 
-class Ship {
-    driveInWater() {
-        console.log("drive in water");
-    }
+type ColorfulCircle = Colorful & Circle;
+
+function draw(circle: Colorful & Circle) {
+    console.log(`Color was ${circle.color}`);
+    console.log(`Radius was ${circle.radius}`);
 }
 
 export function intersectionBasic() {
-    let carShip: Car & Ship = <Car & Ship>{};
-
-    carShip.driveOnRoad();
-    carShip.driveInWater();
+    draw({ color: "blue", radius: 42 });
 }
