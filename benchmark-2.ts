@@ -1,17 +1,22 @@
-class TreeNode {
-    hash?: number;
-    value?: number;
-    left?: TreeNode;
-    right?: TreeNode;
+class A1 {
+    say() {
 
-    check(): boolean {
-        if (this.hash != undefined) {
-            if (this.value != undefined) {
-                return true
-            } else if (this.left != undefined && this.right != undefined) {
-                return this.left.check() && this.right.check();
-            }
-        }
-        return false
     }
+}
+
+class B1 {
+    say() {
+
+    }
+}
+
+function myfunc(objA?: A1) {
+    if (objA != undefined) {
+        objA.say();
+    }
+
+}
+
+export function test() {
+    myfunc(new A1());
 }
