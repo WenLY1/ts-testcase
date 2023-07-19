@@ -21,3 +21,8 @@ export function unionClassNumber() {
     let a: A | number = new A();
     return a.x;     // Exception: unreachable
 }
+
+export function unionClassNumber2() {
+    let a: A | number = new A();
+    return (a as A).x;     // 10:f64
+}
