@@ -12,3 +12,8 @@ class Cat extends Animal{
         //console.log(this.kind);
     }
 }
+
+export function testClassExtends(){
+    let c = new Cat();
+    c.printKind();
+}
