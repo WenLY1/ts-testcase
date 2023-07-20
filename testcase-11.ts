@@ -1,19 +1,15 @@
-class Animal{
-    kind: number = 10;
-    printKind(){
-        console.log(this.kind);
+class A{
+    static sayA(){
+        console.log("A");
     }
 }
 
-class Cat extends Animal{
-    //kind: number = 0;
-    printKind(){
-        console.log(super.kind);
-        //console.log(this.kind);
+class B extends A {
+    static sayB(): void {
+        super.sayA()
     }
 }
 
-export function testClassExtends(){
-    let c = new Cat();
-    c.printKind();
+export function test(){
+    B.sayB();
 }
